@@ -31,17 +31,13 @@ struct SelectCurrency: View {
                 
                 // currency icons
                 LazyVGrid(columns: [GridItem(), GridItem(), GridItem()]) {
-                    ForEach(0..<5){_ in
-                        CurrencyIcon(CurrencyImage: .copperpenny, CurrencyName: "Copper Penny")
-                        
+              CurrencyIcon(CurrencyImage: .copperpenny, CurrencyName: "Copper Penny")
+              CurrencyIcon(CurrencyImage: .silverpenny, CurrencyName: "Silver Penny")
+              CurrencyIcon(CurrencyImage: .silverpiece, CurrencyName: "Silver Piece")
+              CurrencyIcon(CurrencyImage: .goldpenny, CurrencyName: "Gold Penny")
+              CurrencyIcon(CurrencyImage: .goldpiece, CurrencyName: "Gold Piece")
                     }
-                    
-                    
-                    /* CurrencyIcon(CurrencyImage: .copperpenny, CurrencyName: "Copper Penny")
-                     CurrencyIcon(CurrencyImage: .silverpenny, CurrencyName: "Silver Penny")
-                     CurrencyIcon(CurrencyImage: .silverpiece, CurrencyName: "Silver Piece")
-                     CurrencyIcon(CurrencyImage: .goldpenny, CurrencyName: "Gold Penny")
-                     CurrencyIcon(CurrencyImage: .goldpiece, CurrencyName: "Gold Piece")*/
+            
                     
                     
                     
@@ -51,10 +47,16 @@ struct SelectCurrency: View {
                     
                     
                     // currency icons
+                   LazyVGrid(columns: [GridItem(), GridItem(), GridItem()]) {
+                       ForEach(0..<5){_ in
+                           CurrencyIcon(CurrencyImage: .copperpenny, CurrencyName: "Copper Penny")
+                           
+                       }
                     
                     // Done buttons
                     Button("Done") {
                         dismiss()
+                    
                     }
                     .buttonStyle(.borderedProminent)
                     .tint(.brown)
