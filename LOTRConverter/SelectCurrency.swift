@@ -28,35 +28,29 @@ struct SelectCurrency: View {
                 // text
                 Text("Select the currency you are starting with:")
                     .fontWeight(.bold)
+                    .padding()
                 
                 // currency icons
                 LazyVGrid(columns: [GridItem(), GridItem(), GridItem()]) {
-              CurrencyIcon(CurrencyImage: .copperpenny, CurrencyName: "Copper Penny")
-              CurrencyIcon(CurrencyImage: .silverpenny, CurrencyName: "Silver Penny")
-              CurrencyIcon(CurrencyImage: .silverpiece, CurrencyName: "Silver Piece")
-              CurrencyIcon(CurrencyImage: .goldpenny, CurrencyName: "Gold Penny")
-              CurrencyIcon(CurrencyImage: .goldpiece, CurrencyName: "Gold Piece")
+                    ForEach(Currency.allCases){currency in
+                        CurrencyIcon(CurrencyImage: currency.image, CurrencyName: currency.name)
                     }
-            
-                    
-                    
-                    
+                }
                     // text
-                    Text("Select the currency you eould like to convert to:")
+                    Text("Select the currency you would like to convert to:")
                         .fontWeight(.bold)
-                    
-                    
+                        .padding()
+
                     // currency icons
                    LazyVGrid(columns: [GridItem(), GridItem(), GridItem()]) {
-                       ForEach(0..<5){_ in
-                           CurrencyIcon(CurrencyImage: .copperpenny, CurrencyName: "Copper Penny")
-                           
+                       ForEach(Currency.allCases){currency in
+                           CurrencyIcon(CurrencyImage: currency.image, CurrencyName: currency.name)
                        }
                     
                     // Done buttons
                     Button("Done") {
                         dismiss()
-                    
+                        
                     }
                     .buttonStyle(.borderedProminent)
                     .tint(.brown)
@@ -66,9 +60,6 @@ struct SelectCurrency: View {
                 .padding()
                 .multilineTextAlignment(.center)
             }
-            
-            
-            
             
          }
         }

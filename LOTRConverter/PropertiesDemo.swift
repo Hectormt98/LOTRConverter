@@ -135,6 +135,10 @@ struct LoopView: View {
        }
    */
        
+var allPuppies = ["pongo","perdy","beethoven"]
+
+
+
 
 
 
