@@ -11,10 +11,10 @@ struct SelectCurrency: View {
     
     
     @Environment(\.dismiss) var dismiss
+    @State var topCurrency: Currency = .copperPenny
+    @State var bottomCurrency: Currency = .goldPiece
     
     var body: some View {
-        
-        
         ZStack {
             
             //parchment background image
@@ -23,7 +23,6 @@ struct SelectCurrency: View {
                 .ignoresSafeArea()
                 .background(.brown)
             
-            
             VStack {
                 // text
                 Text("Select the currency you are starting with:")
@@ -31,41 +30,31 @@ struct SelectCurrency: View {
                     .padding()
                 
                 // currency icons
-                LazyVGrid(columns: [GridItem(), GridItem(), GridItem()]) {
-                    ForEach(Currency.allCases){currency in
-                        CurrencyIcon(CurrencyImage: currency.image, CurrencyName: currency.name)
-                    }
-                }
-                    // text
-                    Text("Select the currency you would like to convert to:")
-                        .fontWeight(.bold)
-                        .padding()
-
-                    // currency icons
-                   LazyVGrid(columns: [GridItem(), GridItem(), GridItem()]) {
-                       ForEach(Currency.allCases){currency in
-                           CurrencyIcon(CurrencyImage: currency.image, CurrencyName: currency.name)
-                       }
-                    
-                    // Done buttons
-                    Button("Done") {
-                        dismiss()
-                        
-                    }
-                    .buttonStyle(.borderedProminent)
-                    .tint(.brown)
-                    .font(.largeTitle)
+                IconGrid(currency: topCurrency)
+                // text
+                Text("Select the currency you would like to convert to:")
+                    .fontWeight(.bold)
                     .padding()
+                
+                // currency icons
+                IconGrid(currency: bottomCurrency)
+                // Done buttons
+                Button("Done") {
+                    dismiss()
+                    
                 }
+                .buttonStyle(.borderedProminent)
+                .tint(.brown)
+                .font(.largeTitle)
                 .padding()
-                .multilineTextAlignment(.center)
             }
-            
-         }
+            .padding()
+            .multilineTextAlignment(.center)
         }
     }
-    
-    #Preview {
-        SelectCurrency()
-    }
+}
+
+#Preview {
+    SelectCurrency()
+}
 

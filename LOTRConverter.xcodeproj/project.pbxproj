@@ -17,6 +17,7 @@
 		605DC2892C10167700FA6900 /* CurrencyIcon.swift in Sources */ = {isa = PBXBuildFile; fileRef = 605DC2882C10167700FA6900 /* CurrencyIcon.swift */; };
 		605DC28B2C11689600FA6900 /* Currency.swift in Sources */ = {isa = PBXBuildFile; fileRef = 605DC28A2C11689600FA6900 /* Currency.swift */; };
 		605DC2902C582F4300FA6900 /* PropertiesDemo.swift in Sources */ = {isa = PBXBuildFile; fileRef = 605DC28F2C582F4300FA6900 /* PropertiesDemo.swift */; };
+		605DC2922C58982F00FA6900 /* IconGrid.swift in Sources */ = {isa = PBXBuildFile; fileRef = 605DC2912C58982F00FA6900 /* IconGrid.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -31,6 +32,7 @@
 		605DC2882C10167700FA6900 /* CurrencyIcon.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CurrencyIcon.swift; sourceTree = "<group>"; };
 		605DC28A2C11689600FA6900 /* Currency.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Currency.swift; sourceTree = "<group>"; };
 		605DC28F2C582F4300FA6900 /* PropertiesDemo.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PropertiesDemo.swift; sourceTree = "<group>"; };
+		605DC2912C58982F00FA6900 /* IconGrid.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = IconGrid.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -69,6 +71,7 @@
 				602542182C0D797B00E6DA8F /* ExchangeInfo.swift */,
 				6025421A2C0D79D900E6DA8F /* ExchangeRate.swift */,
 				605DC2862C100E4900FA6900 /* SelectCurrency.swift */,
+				605DC2912C58982F00FA6900 /* IconGrid.swift */,
 				605DC2882C10167700FA6900 /* CurrencyIcon.swift */,
 				605DC28F2C582F4300FA6900 /* PropertiesDemo.swift */,
 				6025420E2C0D793700E6DA8F /* Assets.xcassets */,
@@ -161,6 +164,7 @@
 				605DC28B2C11689600FA6900 /* Currency.swift in Sources */,
 				6025420D2C0D793500E6DA8F /* ContentView.swift in Sources */,
 				602542192C0D797B00E6DA8F /* ExchangeInfo.swift in Sources */,
+				605DC2922C58982F00FA6900 /* IconGrid.swift in Sources */,
 				6025420B2C0D793500E6DA8F /* LOTRConverterApp.swift in Sources */,
 				605DC2892C10167700FA6900 /* CurrencyIcon.swift in Sources */,
 			);
